@@ -1,4 +1,4 @@
-package com.example.demo0403.service;
+package com.example.demo0403.service.rbac;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,7 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import com.example.demo0403.dao.UsersDao;
-import com.example.demo0403.domain.Users;
+import com.example.demo0403.domain.rbac.Users;
 
 @Service
 public class UsersServiceImpl implements UsersService{

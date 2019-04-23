@@ -1,12 +1,16 @@
-package com.example.demo0403.domain;
+package com.example.demo0403.domain.rbac;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -32,4 +36,7 @@ public class Users implements Serializable{
 	@Column(name="password")
 	private String password;
 
+	@ManyToOne(cascade= {CascadeType.MERGE,CascadeType.REFRESH},optional=false)
+	@JoinColumn(name="rid")//外键
+	private Role role;//角色
 }

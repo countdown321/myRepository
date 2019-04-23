@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.example.demo0403.domain.Users;
+import com.example.demo0403.domain.rbac.Users;
 
 public interface UsersDao extends JpaRepository<Users, Integer>{
 
